@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "Require nokogiri gem"
   spec.description   = "Check TimeZone"
-  spec.homepage      = "TODO: https://github.com/SFzxc/dateNtime"
+  spec.homepage      = "https://github.com/SFzxc/dateNtime"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
