@@ -10,8 +10,13 @@ module Dnt
     def search(params)
       data = Nokogiri::HTML(open(URL+params))
       locals = data.css('.zebra td')
-      (0...MAX_FIND).step(2) do |i|
-        puts "#{locals[i].inner_text}  |  #{locals[i.next].inner_text}"
+      if locals.empty?
+        puts "Results of Search for `#{params}` - 0"
+      else
+        puts "10 results first for `#{params}`: "
+        (0...MAX_FIND).step(2) do |i|
+          puts "#{locals[i].inner_text}  |  #{locals[i.next].inner_text}"
+        end
       end
     end
   end
